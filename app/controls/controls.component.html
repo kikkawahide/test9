@@ -1,0 +1,25 @@
+<h2>コーヒー品目リスト</h2>
+<form [formGroup]="coffeeForm" novalidate>
+  <div>
+    <label>品名:<input formControlName="name" ></label>
+  </div>
+  <div>
+    <label>テイスト:<input formControlName="taste" size="50"></label>
+  </div>
+  <div>
+    <span>
+      <input type="radio" formControlName="hotcold" value="Hot">Hot
+    </span>
+  </div>
+  <div>
+    <span>
+      <input type="radio" formControlName="hotcold" value="Cold">Cold
+    </span>
+  </div>
+  <div>
+    <span *ngFor="let state of hotcoldsel">
+        <input type="radio" formControlName="hotcold2" [value]="state">{{state}}
+    </span>
+  </div>
+</form>
+<p>フォーム入力値: {{coffeeForm.value|json}} </p>
