@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl} from '@angular/forms'
+import { FormGroup,FormControl, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-better-form',
@@ -15,8 +15,8 @@ export class BetterFormComponent implements OnInit {
   ngOnInit() {
 
     this.calcForm = new FormGroup({
-      "fieldOne": new FormControl("0"),
-      "fieldTwo": new FormControl("0"),
+      "fieldOne": new FormControl("0",Validators.required),
+      "fieldTwo": new FormControl("0",[Validators.required,Validators.maxLength(5)]),
       
     });
 

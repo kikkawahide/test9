@@ -5,7 +5,7 @@
 <input [(ngModel)]="text1" name="fieldone" required #fieldone="ngModel"  >
 
 <input [(ngModel)]="text2"  name="fieldtwo"  required #fieldtwo="ngModel" >
-<button (click)="addAndShow()"  [disabled]="calcForm.invalid" > CALC</button>
+<button (click)="addAndshow()"   [disabled]="calcForm.invalid" > CALC</button>
 <div>{{result}}</div>
 <div>
   <span *ngIf="fieldone.invalid">左側のフィールドが空白です</span>

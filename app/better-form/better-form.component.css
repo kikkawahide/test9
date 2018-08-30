@@ -1,0 +1,6 @@
+.input-valid {
+    border-bottom: 2pt solid green ;
+}
+.input-invalid {
+    border-bottom: 2pt solid red;
+}
