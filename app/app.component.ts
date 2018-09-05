@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!(test)';
+  title = 'my page';
+  paths=[
+    {pathname:"./simple-form",title:"Simple Form"},
+    {pathname:"./better-form",title:"Better Form"},
+    {pathname:"./controls",title:"Controls"}
+  ];
 }

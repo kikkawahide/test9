@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { BetterFormComponent } from './better-form/better-form.component';
 import { ControlsComponent } from './controls/controls.component';
-
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,9 @@ import { ControlsComponent } from './controls/controls.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

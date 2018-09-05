@@ -1,6 +1,18 @@
-<h1>
-  {{title}}
+
  <!--  <app-simple-form></app-simple-form>  -->
  <!--  <app-better-form></app-better-form> -->
- <app-controls></app-controls> 
-</h1>
+ <!--  <app-better-form></app-better-form> -->
+ <!--  <app-controls></app-controls> -->
+ <!-- <nav>
+   <a routerLink="./simple-form" routerLinkActive="selected-item">Simple Form</a> | 
+   <a routerLink="./better-form" routerLinkActive="selected-item"> Better Form</a> | 
+   <a routerLink="./controls" routerLinkActive="selected-item"> controls</a>  
+ </nav>
+-->
+<nav>
+  <a *ngFor= "let path of paths"
+    routerLinkActive = "select-item" [routerLink]="path.pathname" >{{path.title}}
+  </a>
+</nav>
+<div><router-outlet></router-outlet></div> 
+
